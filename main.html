@@ -36,7 +36,7 @@
 
 <script>
 //Your code goes here 
-const slider = document.querySelector('.items'); // Container select karo
+const slider = document.querySelector('.items'); 
 let isDown = false;
 let startX;
 let scrollLeft;
@@ -62,10 +62,9 @@ slider.addEventListener('mousemove', (e) => {
   if (!isDown) return;
   e.preventDefault();
   const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 2; // Drag speed adjust
+  const walk = (x - startX) * 3; // Increased multiplier for more visible movement
   slider.scrollLeft = scrollLeft - walk;
 });
-	
 </script>
 
   </body>
